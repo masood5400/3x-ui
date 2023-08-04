@@ -23,10 +23,10 @@ bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.
 
 # Install custom version
 
-To install your desired version you can add the version to the end of install command. Example for ver `v1.6.1`:
+To install your desired version you can add the version to the end of install command. Example for ver `v1.7.1`:
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) v1.6.1
+bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh) v1.7.1
 ```
 
 # SSL
@@ -178,7 +178,7 @@ If you want to use routing to WARP follow steps as below:
 2. Install WARP on **socks proxy mode**:
 
    ```sh
-   bash <(curl -sSL https://gist.githubusercontent.com/hamid-gh98/dc5dd9b0cc5b0412af927b1ccdb294c7/raw/install_warp_proxy.sh)
+   bash <(curl -sSL https://raw.githubusercontent.com/hamid-gh98/x-ui-scripts/main/install_warp_proxy.sh)
    ```
 
 3. Turn on the config you need in panel or [Copy and paste this file to Xray Configuration](./media/configs/traffic+block-ads+warp.json)
@@ -188,6 +188,27 @@ If you want to use routing to WARP follow steps as below:
    - Block Ads
    - Route Google + Netflix + Spotify + OpenAI (ChatGPT) to WARP
    - Fix Google 403 error
+
+</details>
+
+# IP Limit
+
+<details>
+  <summary>Click for IP Limit details</summary>
+
+**Note: IP Limit won't work correctly when using IP Tunnel**
+
+- For versions up to `v1.6.1`:
+
+  - IP limit is built-in into the panel.
+
+- For versions `v1.7.0` and newer:
+
+  - To make IP Limit work properly, you need to install fail2ban and its required files by following these steps:
+
+    1. Use the `x-ui` command inside the shell.
+    2. Select `16. IP Limit Management`.
+    3. Choose the appropriate options based on your needs.
 
 </details>
 
@@ -238,7 +259,7 @@ Reference syntax:
 <details>
   <summary>Click for API routes details</summary>
 
-- `/login` with `PUSH` user data: `{username: '', password: ''}` for login
+- `/login` with `POST` user data: `{username: '', password: ''}` for login
 - `/panel/api/inbounds` base for following actions:
 
 | Method | Path                               | Action                                      |
@@ -280,6 +301,7 @@ Reference syntax:
 | XUI_DEBUG      |                   `boolean`                    | `false`       |
 | XUI_BIN_FOLDER |                    `string`                    | `"bin"`       |
 | XUI_DB_FOLDER  |                    `string`                    | `"/etc/x-ui"` |
+| XUI_LOG_FOLDER |                    `string`                    | `"/var/log"`  |
 
 Example:
 
