@@ -7,7 +7,7 @@ require (
 	github.com/Workiva/go-datastructures v1.1.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/goccy/go-json v0.10.2
-	github.com/mymmrac/telego v0.26.0
+	github.com/mymmrac/telego v0.26.1
 	github.com/nicksnyder/go-i18n/v2 v2.2.1
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
 	github.com/pelletier/go-toml/v2 v2.0.9
@@ -18,7 +18,7 @@ require (
 	golang.org/x/text v0.12.0
 	google.golang.org/grpc v1.57.0
 	gorm.io/driver/sqlite v1.5.3
-	gorm.io/gorm v1.25.3
+	gorm.io/gorm v1.25.4
 )
 
 require (
