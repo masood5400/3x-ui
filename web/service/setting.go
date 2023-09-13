@@ -39,7 +39,7 @@ var defaultValueMap = map[string]string{
 	"tgBotChatId":        "",
 	"tgRunTime":          "@daily",
 	"tgBotBackup":        "false",
-	"tgBotLoginNotify":   "false",
+	"tgBotLoginNotify":   "true",
 	"tgCpu":              "0",
 	"tgLang":             "en-US",
 	"secretEnable":       "false",
@@ -51,6 +51,8 @@ var defaultValueMap = map[string]string{
 	"subCertFile":        "",
 	"subKeyFile":         "",
 	"subUpdates":         "12",
+	"subEncrypt":         "true",
+	"subShowInfo":        "true",
 }
 
 type SettingService struct {
@@ -394,6 +396,14 @@ func (s *SettingService) GetSubKeyFile() (string, error) {
 
 func (s *SettingService) GetSubUpdates() (int, error) {
 	return s.getInt("subUpdates")
+}
+
+func (s *SettingService) GetSubEncrypt() (bool, error) {
+	return s.getBool("subEncrypt")
+}
+
+func (s *SettingService) GetSubShowInfo() (bool, error) {
+	return s.getBool("subShowInfo")
 }
 
 func (s *SettingService) UpdateAllSetting(allSetting *entity.AllSetting) error {

@@ -127,7 +127,6 @@
 "network" = "网络"
 "destinationPort" = "目标端口"
 "targetAddress" = "目标地址"
-"disableInsecureEncryption" = "禁用不安全加密"
 "monitorDesc" = "默认留空即可"
 "meansNoLimit" = "表示不限制"
 "totalFlow" = "总流量"
@@ -274,6 +273,10 @@
 "subDomainDesc" = "留空默认监控所有域名和IP"
 "subUpdates" = "订阅更新间隔"
 "subUpdatesDesc" = "客户端应用程序更新之间的间隔时间"
+"subEncrypt" = "加密配置"
+"subEncryptDesc" = "在订阅中加密返回的配置"
+"subShowInfo" = "显示使用信息"
+"subShowInfoDesc" = "在配置名称后显示剩余流量和日期"
 
 [pages.settings.templates]
 "title" = "模板"

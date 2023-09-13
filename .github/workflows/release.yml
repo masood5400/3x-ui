@@ -14,12 +14,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3.5.3
+        uses: actions/checkout@v4.0.0
 
       - name: Setup Go
         uses: actions/setup-go@v4.1.0
         with:
-          go-version: '1.20'
+          go-version: '1.21'
           
       - name: Install dependencies for arm64
         if: matrix.platform == 'arm64'
@@ -47,11 +47,11 @@ jobs:
           
           # Download dependencies
           if [ "${{ matrix.platform }}" == "amd64" ]; then
-            wget https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-64.zip
+            wget https://github.com/XTLS/Xray-core/releases/download/v1.8.4/Xray-linux-64.zip
             unzip Xray-linux-64.zip
             rm -f Xray-linux-64.zip
           else
-            wget https://github.com/XTLS/Xray-core/releases/download/v1.8.1/Xray-linux-arm64-v8a.zip
+            wget https://github.com/XTLS/Xray-core/releases/download/v1.8.4/Xray-linux-arm64-v8a.zip
             unzip Xray-linux-arm64-v8a.zip
             rm -f Xray-linux-arm64-v8a.zip
           fi
